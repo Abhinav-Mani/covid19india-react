@@ -190,15 +190,6 @@ function Row(props) {
         <React.Fragment>
           <tr className={'state-last-update'}>
             <td colSpan={2}>
-              <ReactTooltip
-                id="unknown"
-                place="right"
-                type="dark"
-                effect="solid"
-                multiline={true}
-                scrollHide={true}
-                globalEventOff="click"
-              />
               <div className="last-update">
                 <h6>Last updated&nbsp;</h6>
                 <h6
@@ -337,11 +328,13 @@ function Row(props) {
               <span onClick={handleTooltip}>
                 <span
                   data-for="unknown"
-                  data-tip={[[sortedDistricts['Unknown'].notes]]}
+                  data-tip={
+                    'Awaiting patient-level details from State Bulletin'
+                  }
                   data-event="touchstart mouseover"
                   data-event-off="mouseleave"
                 >
-                  {sortedDistricts['Unknown'].notes && <Icon.Info />}
+                  <Icon.Info />
                 </span>
               </span>
             </td>
