@@ -190,6 +190,15 @@ function Row(props) {
         <React.Fragment>
           <tr className={'state-last-update'}>
             <td colSpan={2}>
+              <ReactTooltip
+                id="unknown"
+                place="right"
+                type="dark"
+                effect="solid"
+                multiline={true}
+                scrollHide={true}
+                globalEventOff="click"
+              />
               <div className="last-update">
                 <h6>Last updated&nbsp;</h6>
                 <h6
@@ -265,16 +274,6 @@ function Row(props) {
           </tr>
         </React.Fragment>
       )}
-
-      <ReactTooltip
-        id="unknown"
-        place="right"
-        type="dark"
-        effect="solid"
-        multiline={true}
-        scrollHide={true}
-        globalEventOff="click"
-      />
 
       {sortedDistricts &&
         showDistricts &&
