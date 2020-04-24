@@ -299,6 +299,15 @@ function Row(props) {
                       >
                         {sortedDistricts[district].notes && <Icon.Info />}
                       </span>
+                      <ReactTooltip
+                        id="unknown"
+                        place="right"
+                        type="dark"
+                        effect="solid"
+                        multiline={true}
+                        scrollHide={true}
+                        globalEventOff="click"
+                      />
                     </span>
                   </td>
                   <td>
@@ -328,13 +337,11 @@ function Row(props) {
               <span onClick={handleTooltip}>
                 <span
                   data-for="unknown"
-                  data-tip={
-                    'Awaiting patient-level details from State Bulletin'
-                  }
+                  data-tip={[[sortedDistricts['Unknown'].notes]]}
                   data-event="touchstart mouseover"
                   data-event-off="mouseleave"
                 >
-                  <Icon.Info />
+                  {sortedDistricts['Unknown'].notes && <Icon.Info />}
                 </span>
               </span>
             </td>
