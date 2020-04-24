@@ -266,6 +266,16 @@ function Row(props) {
         </React.Fragment>
       )}
 
+      <ReactTooltip
+        id="unknown"
+        place="right"
+        type="dark"
+        effect="solid"
+        multiline={true}
+        scrollHide={true}
+        globalEventOff="click"
+      />
+
       {sortedDistricts &&
         showDistricts &&
         Object.keys(sortedDistricts)
@@ -299,15 +309,6 @@ function Row(props) {
                       >
                         {sortedDistricts[district].notes && <Icon.Info />}
                       </span>
-                      <ReactTooltip
-                        id="unknown"
-                        place="right"
-                        type="dark"
-                        effect="solid"
-                        multiline={true}
-                        scrollHide={true}
-                        globalEventOff="click"
-                      />
                     </span>
                   </td>
                   <td>
